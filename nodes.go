@@ -89,7 +89,7 @@ func ParseNodesMetrics(input []byte) *NodesMetrics {
 			resv := regexp.MustCompile(`^res`)
 			powered_down := regexp.MustCompile(`^idle\~`)
 			powering_down := regexp.MustCompile(`^idle%`)
-			powering_on := regexp.MustCompile(`^mix#`)
+			powering_on := regexp.MustCompile(`^mixed#`)
 			switch {
 			case alloc.MatchString(state):
 				nm.alloc += count
